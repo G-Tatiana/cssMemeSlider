@@ -68,6 +68,7 @@ img {
 .slider {
     max-width: 46rem;
     overflow: hidden;
+    display: flex;
 }
 
 .slider { grid-area: s; }
@@ -104,15 +105,12 @@ img {
 }
 
 .mem-img {
-  width: 100%;
   object-fit: cover;
   border-radius: 1%;
 }
 
 .images {
     margin: 0 auto;
-    
-    overflow: hidden;
     display: flex;
     align-items: center;
     transition: all 1s;
