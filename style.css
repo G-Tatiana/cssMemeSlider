@@ -56,21 +56,26 @@ img {
 }
 
 .main {
-    max-width: 35rem;
     margin: 0 auto;
+    max-width: 46rem;
     display: grid;
     row-gap: 3%;
-    grid-template-areas: "i i i"
+    grid-template-areas: "s s s"
                          "t . b"
                          ". . ."
 }
 
-.images { grid-area: i; }
+.slider {
+    max-width: 46rem;
+    overflow: hidden;
+}
+
+.slider { grid-area: s; }
 .text { grid-area: t; }
 .buttons {
     grid-area: b;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 0.8rem;
 }
 
@@ -106,7 +111,7 @@ img {
 
 .images {
     margin: 0 auto;
-    max-width: 50rem;
+    
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -116,7 +121,7 @@ img {
 @media screen and (max-width: 500px) {
     .main {
         display: grid;
-        grid-template-areas: "i i i"
+        grid-template-areas: "s s s"
                              "b b b"
                              "t t t";
     }
