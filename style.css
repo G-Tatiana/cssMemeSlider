@@ -90,7 +90,6 @@ img {
 
 
 .button {
-	margin-left: 0.5rem;
 	display: block;
 	height: 0.6rem;
 	width: 1.5rem;
@@ -101,12 +100,12 @@ img {
 	transition: 1s;
 }
 
-.button:hover {
+.control label:hover .button {
 	border: 0.15rem solid #caf0f8;
 	background-color: #caf0f8;
 }
 
-.button:active {
+.control label:active .button {
 	border: 0.2rem solid #649DAD;
 	background-color: #649DAD;
 }
@@ -128,6 +127,15 @@ img {
 .control {
 	display: flex;
 	justify-content: space-between;
+}
+
+.control label {
+	height: 1.3rem;
+	width: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: url('/img/Cursor2.png'), pointer;
 }
 
 .slider {
@@ -167,19 +175,27 @@ img {
 	transition: 2s;
 }
 
-#point1:checked ~ .control label:nth-child(1),
-#point2:checked ~ .control label:nth-child(2),
-#point3:checked ~ .control label:nth-child(3),
-#point4:checked ~ .control label:nth-child(4) {
+#point1:checked ~ .control label:nth-child(1) span,
+#point2:checked ~ .control label:nth-child(2) span,
+#point3:checked ~ .control label:nth-child(3) span,
+#point4:checked ~ .control label:nth-child(4) span {
 	border: 0.15rem solid #0d1b2a;
 	background-color: #778da9;
 }
 
-#point1:checked ~ .control label:nth-child(1):hover,
-#point2:checked ~ .control label:nth-child(2):hover,
-#point3:checked ~ .control label:nth-child(3):hover,
-#point4:checked ~ .control label:nth-child(4):hover {
+#point1:checked ~ .control label:nth-child(1):hover span,
+#point2:checked ~ .control label:nth-child(2):hover span,
+#point3:checked ~ .control label:nth-child(3):hover span,
+#point4:checked ~ .control label:nth-child(4):hover span {
 	border: 0.15rem solid #caf0f8;
+	background-color: #778da9;
+}
+
+#point1:checked ~ .control label:nth-child(1):active span,
+#point2:checked ~ .control label:nth-child(2):active span,
+#point3:checked ~ .control label:nth-child(3):active span,
+#point4:checked ~ .control label:nth-child(4):active span {
+	border: 0.15rem solid #649DAD;
 	background-color: #778da9;
 }
 
