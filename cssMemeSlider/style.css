@@ -1,0 +1,244 @@
+.audiowide-regular {
+	font-family: "Audiowide", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+
+
+body {
+    font-size: 0.94rem;
+    margin: 0;
+    padding: 0;
+    background-color: #778da9;
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+	cursor: url('/cssMemeSlider/img/Cursor1.png'), pointer;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    border-style: none;
+  }
+
+input {
+	display: none;
+}
+
+img {
+	object-fit: cover;
+	border-radius: 1%;
+	max-inline-size: 100%;
+	block-size: auto;
+  }
+
+.container {
+	max-width: 46.8rem;
+	margin: 0 auto;
+}
+
+.section {
+    margin: 2rem auto 1rem;
+    padding: 0 1rem;
+}
+
+.slider-title {
+	font-family: "Audiowide", sans-serif;
+	font-size: 2.1rem;
+	color: #0d1b2a;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.text {
+	font-family: "Audiowide", sans-serif;
+	font-size: 1.2rem;
+	color: #0d1b2a;
+	margin-bottom: 3rem;
+}
+
+
+.button {
+	display: block;
+	height: 0.6rem;
+	width: 1.5rem;
+	border: 0.15rem solid #0d1b2a;
+	background-color: #0d1b2a;
+	border-radius: 30%;
+	cursor: url('/cssMemeSlider/img/Cursor2.png'), pointer;
+	transition: 1s;
+}
+
+.control label:hover .button {
+	border: 0.15rem solid #caf0f8;
+	background-color: #caf0f8;
+}
+
+.control label:active .button {
+	border: 0.2rem solid #649DAD;
+	background-color: #649DAD;
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 100%;
+	overflow: hidden;
+	display: grid;
+	row-gap: 1rem;
+	grid-template-areas: "s s s"
+						 "t . c";
+}
+
+.slider { grid-area: s; }
+.text-box { grid-area: t; }
+.control { grid-area: c; }
+
+.control {
+	display: flex;
+	justify-content: space-between;
+}
+
+.control label {
+	height: 1.3rem;
+	width: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: url('/cssMemeSlider/img/Cursor2.png'), pointer;
+}
+
+.slider {
+	display: flex;
+}
+
+.img {
+	transition: 1.5s;
+}
+
+.text-box {
+	overflow: hidden;
+	max-height: 4rem;
+}
+
+.text-box div:nth-child(1) {
+	transform: translateY(230%);
+	opacity: 0;
+	transition: 2s;
+}
+
+.text-box div:nth-child(2) {
+	transform: translateY(20%);
+	opacity: 0;
+	transition: 2s;
+}
+
+.text-box div:nth-child(3) {
+	transform: translateY(-100%);
+	opacity: 0;
+	transition: 2s;
+}
+
+.text-box div:nth-child(4) {
+	transform: translateY(-450%);
+	opacity: 0;
+	transition: 2s;
+}
+
+#point1:checked ~ .control label:nth-child(1) span,
+#point2:checked ~ .control label:nth-child(2) span,
+#point3:checked ~ .control label:nth-child(3) span,
+#point4:checked ~ .control label:nth-child(4) span {
+	border: 0.15rem solid #0d1b2a;
+	background-color: #778da9;
+}
+
+#point1:checked ~ .control label:nth-child(1):hover span,
+#point2:checked ~ .control label:nth-child(2):hover span,
+#point3:checked ~ .control label:nth-child(3):hover span,
+#point4:checked ~ .control label:nth-child(4):hover span {
+	border: 0.15rem solid #caf0f8;
+	background-color: #778da9;
+}
+
+#point1:checked ~ .control label:nth-child(1):active span,
+#point2:checked ~ .control label:nth-child(2):active span,
+#point3:checked ~ .control label:nth-child(3):active span,
+#point4:checked ~ .control label:nth-child(4):active span {
+	border: 0.15rem solid #649DAD;
+	background-color: #778da9;
+}
+
+#point1:checked ~ .slider img:nth-child(1) {
+	margin-left: 0;
+}
+#point2:checked ~ .slider img:nth-child(2) {
+	margin-left: -100%;
+}
+#point3:checked ~ .slider img:nth-child(3) {
+	margin-left: -200%;
+}
+#point4:checked ~ .slider img:nth-child(4) {
+	margin-left: -300%;
+}
+
+#point1:checked ~ .text-box div:nth-child(1) {
+	transform: translateY(-10%);
+	opacity: 1;
+}
+#point2:checked ~ .text-box div:nth-child(2) {
+	transform: translateY(-300%);
+	opacity: 1;
+}
+#point3:checked ~ .text-box div:nth-child(3) {
+	transform: translateY(-600%);
+	opacity: 1;
+}
+#point4:checked ~ .text-box div:nth-child(4) {
+	transform: translateY(-900%);
+	opacity: 1;
+}
+
+@media (max-width: 745px ) {
+	.main {
+		grid-template-areas: "s s s"
+							 "c c c"
+							 "t t t";
+	}
+
+	.control {
+		justify-content: center;
+
+	}
+}
+
