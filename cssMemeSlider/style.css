@@ -19,9 +19,7 @@ html {
 	cursor: url('/cssMemeSlider/img/Cursor1.png'), pointer;
 }
 
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
 }
 
