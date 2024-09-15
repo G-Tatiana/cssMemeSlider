@@ -135,7 +135,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	cursor: url('/img/Cursor2.png'), pointer;
+	cursor: url('/cssMemeSlider/img/Cursor2.png'), pointer;
 }
 
 .slider {
